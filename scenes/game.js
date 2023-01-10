@@ -22,8 +22,8 @@ gameScene.create = function () {
       staggeraxis: "x", // 'x'|'y'
       staggerindex: "odd", // 'odd'|'even'
     },
-    width: 40,
-    height: 40,
+    width: 80,
+    height: 80,
     wrap: false,
     infinity: false,
   });
@@ -51,7 +51,7 @@ gameScene.create = function () {
     chess.gameNumber = gameNumber;
   });
   this.gameLooper = this.time.addEvent({
-    delay: 100,
+    delay: 500,
     repeat: -1,
     callback: function () {
       let oldArray = this.board.getAllChess();
@@ -62,7 +62,7 @@ gameScene.create = function () {
         for (let j = 0; j < neighbors.length; j++) {
           status += neighbors[j].gameNumber;
         }
-        if ((status == 3) && oldArray[i].gameNumber == 1) {
+        if ((status==0) && oldArray[i].gameNumber == 1) {//changing the status number here makes big changes
           newArray[i] = "living";
           oldArray[i].gameNumber = 1;
         } else if ((status == 3 ||status==2) && oldArray[i].gameNumber == 0) {

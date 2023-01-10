@@ -1,6 +1,6 @@
 // set game configuration
 var isMobile = navigator.userAgent.indexOf("Mobile");
-var w = 900;
+var w = 1600;
 var h = 1600;
 
 window.onload = function () {
