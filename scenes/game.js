@@ -14,7 +14,7 @@ gameScene.create = function () {
   const scene = this;
   this.board = scene.rexBoard.add.board({
     grid: {
-      // gridType: "hexagonGrid",
+      gridType: "hexagonGrid",
       x: 0,
       y: 0,
       cellWidth: 30,
