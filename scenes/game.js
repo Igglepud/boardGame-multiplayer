@@ -62,12 +62,15 @@ gameScene.create = function () {
         for (let j = 0; j < neighbors.length; j++) {
           status += neighbors[j].gameNumber;
         }
-        if ((status == 2 || status == 3) && oldArray[i].gameNumber == 1) {
+        if ((status == 3) && oldArray[i].gameNumber == 1) {
           newArray[i] = "living";
-        } else if (status == 3 && oldArray[i].gameNumber == 0) {
+          oldArray[i].gameNumber = 1;
+        } else if ((status == 3 ||status==2) && oldArray[i].gameNumber == 0) {
           newArray[i] = "living";
+          oldArray[i].gameNumber = 1;
         } else {
           newArray[i] = "dead";
+          oldArray[i].gameNumber = 0;
         }
       }
       for (let i = 0; i < oldArray.length; i++) {
