@@ -2,7 +2,7 @@
 <html lang="en">
   <head id="phaser-app">
     <meta charset="utf-8" />
-    <title>Hexamine</title>
+    <title>One Lap</title>
 
     <style>
       canvas {
@@ -11,13 +11,27 @@
         padding: 0px;
         background: #0c23a7;
       }
+
+      body{
+
+        padding-top: 100px;
+        background-color: #0c23a7;
+      }
     </style>
 
-    <body style="background-color: #0c23a7">
       <script src="lib/phaser.js"></script>
+
+      <script src="src/player.js"></script>
+      <script src="src/spinner.js"></script>
+
+      <script src="lib/globals.js"></script>
+
       <script src="lib/rexboardplugin.js"></script>
+      <script src="lib/socket.io.js"></script>
 
       <script src="scenes/preload.js"></script>
+      <script src="scenes/multiplayer.js"></script>
+
 
       <script src="scenes/title.js"></script>
       <script src="scenes/game.js"></script>

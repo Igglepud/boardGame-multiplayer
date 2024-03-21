@@ -19,7 +19,7 @@ let config = {
   fullscreenTarget: "phaser-app",
   width: w,
   height: h,
-  scene: [preloadScene, titleScene, gameScene],
+  scene: [preloadScene, titleScene, gameScene,multiplayerScene],
   pixelArt: false,
   scale: {
     parent: "phaser-example",
