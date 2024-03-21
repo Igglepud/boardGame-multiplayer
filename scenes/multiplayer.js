@@ -1,3 +1,4 @@
+
 let multiplayerScene = new Phaser.Scene("Multiplayer");
 
 multiplayerScene.init = function () {
@@ -13,7 +14,7 @@ multiplayerScene.preload = function () {
 };
 // create after game
 multiplayerScene.create = function () {
-    socket = io(":5506");
+    socket = io(":3031");
 
     socket.on('connection', function (data) { 
 

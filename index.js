@@ -18,6 +18,8 @@ app.get("/", (req, res) => {
 
 io.on("connection", (socket) => {
   players[socket.id] = {};
+  console.log('connected')
+  socket.emit('connection')
 });
 
 server.listen(3031, () => {
