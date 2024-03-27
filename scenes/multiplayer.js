@@ -18,7 +18,7 @@ multiplayerScene.create = function () {
 
     socket.on('connection', function (data) { 
 
-alert('poop scoop')
+alert('socket is live')
 
     },this)
 
