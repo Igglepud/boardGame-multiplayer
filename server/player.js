@@ -1,14 +1,8 @@
- class Player { 
-
-    constructor(id=null) { 
-        this.id = id;
-        console.log('player created')
-
-
-    }
-
-
-
-
-
+class Player {
+  constructor(id) {
+    this.id = id;
+    console.log("player created", this);
+  }
 }
+
+module.exports = Player;
